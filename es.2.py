@@ -32,7 +32,33 @@ def my_function(bimbo1, bimbo3, bimbo4, bimbo2):
 my_function(bimbo1 = "Emil", bimbo2 = "Tobias", bimbo3 = "Linus", bimbo4 = "Charlie")
 
 #quando gli argomenti nella funzione sono in disordine e si vuole stampare un determinato nome in una determinata posizione bisogna usare **
-def my_function(**kid):
-  print("His last name is " + kid["lname"])
+def my_function(**bimbi):
+  print("il mio bimbo preferito è " + bimbi["bimbo1"])
 
-my_function(fname = "Tobias", lname = "Refsnes")
+my_function(bimbo1 = "laura", bimbo2 = "elsa", bimbo3 = "lorenzo")
+
+#Se chiamiamo la funzione senza argomenti, utilizza il valore predefinito
+def my_function(country = "Norway"):
+  print("I am from " + country)
+
+my_function("Sweden")
+my_function("India")
+my_function()
+my_function("Brazil")
+
+#volendo si può far diventare un argomento una lista:
+def my_function(food):
+  for x in food:
+    print(x)
+
+fruits = ["apple", "banana", "cherry"]
+
+my_function(fruits)
+
+#quando si vuole fissare un numero o una stringa costante nel momento in cui si va a stampare un qualcosa nella funzione si usa l'istruzione return
+def my_function(x):
+  return "nero" + x
+
+print(my_function(" gatto"))
+print(my_function(" cane"))
+print(my_function(" coniglio"))
